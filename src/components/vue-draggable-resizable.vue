@@ -10,7 +10,7 @@
     }, className]"
     @mousedown="elementMouseDown"
     @touchstart="elementTouchDown"
-    @contextmenu.prevent='contextmenu'
+    @contextmenu.stop.prevent='contextmenu'
   >
     <div
       v-for="handle in actualHandles"
@@ -334,7 +334,7 @@ export default {
       }
     },
     contextmenu (e) {
-      this.$parent.$emit('contextmenu', this.itemdata, e)
+      this.$emit('contextmenu', this.itemdata, e)
     },
     checkParentSize () {
       if (this.parent) {
