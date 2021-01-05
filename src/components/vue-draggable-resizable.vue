@@ -334,7 +334,7 @@ export default {
       }
     },
     contextmenu (e) {
-      this.$parent.$emit('contextmenu', this.itemdata)
+      this.$parent.$emit('contextmenu', this.itemdata, e)
     },
     checkParentSize () {
       if (this.parent) {
