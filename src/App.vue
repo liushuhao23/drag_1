@@ -17,11 +17,6 @@ export default {
   components: {
     VueDraggableResizable
   },
-  mounted () {
-    this.$on('contextmenu', (data) => {
-      console.log(data)
-    })
-  },
   data: function () {
     return {
       datao: [

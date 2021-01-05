@@ -137,7 +137,6 @@ export default {
         if (typeof val === 'number') {
           return val > 0
         }
-
         return val === 'auto'
       }
     },
