@@ -779,7 +779,7 @@ export default {
 
       if (this.resizing) {
         this.resizing = false
-        this.$emit('resizestop', this.left, this.top, this.width, this.height)
+        this.$emit('resizestop', this.left, this.top, this.width, this.height, this.itemdatas)
       }
 
       if (this.dragging) {
