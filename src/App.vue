@@ -22,9 +22,6 @@ export default {
       datao: [
         {
           id: 1
-        },
-        {
-          id: 2
         }
       ]
     }
