@@ -12,6 +12,7 @@
     @touchstart="elementTouchDown"
     @contextmenu.stop.prevent='contextmenu'
     @click.stop="onclick($event)"
+    @dblclick.stop ='dblclick'
   >
   <div class="line" v-if="enabled">
     <div class="left_line" :style="{'width': left + 'px', 'left': -left +'px'}"></div>
@@ -801,6 +802,9 @@ export default {
     },
     onclick (e) {
       this.$emit('onclick', e)
+    },
+    dblclick (e) {
+      this.$emit('dblclick', e, this.itemdatas)
     }
   },
   filters: {
