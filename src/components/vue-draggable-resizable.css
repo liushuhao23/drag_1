@@ -59,27 +59,27 @@
 }
 .left_line{
   /* width: 50px; */
-  position: relative;
+  position: absolute;
   /* left: -50px; */
   border-top: 1px dashed #05ddff;
 
 }
 .top_line{
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 1px;
   border-left: 1px dashed #05ddff;
 }
 .position_number {
   display: inline;
-  position: relative;
+  position: absolute;
   top: -30px;
   left: -40px;
   font-size: 12px;
   /* color: #ffffff; */
 }
 .line{
-  position: relative;
+  position: absolute;
   width: 1px;
   height: 1px;
 }
