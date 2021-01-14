@@ -18,8 +18,8 @@
     <div class="top_line" :style="{'height': top + 'px', 'top': -top +'px'}"></div>
   </div>
   <div class="position_number" v-if="enabled">
-    <span>{{left}},</span>
-    <span>{{top}}</span>
+    <span>{{left | integer}},</span>
+    <span>{{top | integer}}</span>
   </div>
 
     <div
@@ -803,6 +803,14 @@ export default {
       this.$emit('onclick', e)
     }
   },
+  filters: {
+    integer: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return Math.floor(value)
+      // return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  },
   computed: {
     style () {
       return {
@@ -815,7 +823,6 @@ export default {
     },
     actualHandles () {
       if (!this.resizable) return []
-      console.log(this.handles)
       return this.handles
     },
     computedWidth () {
