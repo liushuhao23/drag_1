@@ -2,7 +2,8 @@
   touch-action: none;
   position: absolute;
   box-sizing: border-box;
-  border: 1px solid #666666 !important;
+  border: 1px solid #05ddff !important;
+  /* border-color: #409eff !important; */
 }
 .handle {
   box-sizing: border-box;
@@ -55,6 +56,31 @@
   bottom: -10px;
   right: -10px;
   cursor: se-resize;
+}
+.left_line{
+  /* width: 50px; */
+  position: relative;
+  /* left: -50px; */
+  border-top: 1px dashed #05ddff;
+
+}
+.top_line{
+  display: inline-block;
+  position: relative;
+  width: 1px;
+  border-left: 1px dashed #05ddff;
+}
+.position_number {
+  display: inline;
+  position: relative;
+  top: -30px;
+  left: -40px;
+  font-size: 12px;
+}
+.line{
+  position: relative;
+  width: 1px;
+  height: 1px;
 }
 @media only screen and (max-width: 768px) {
   [class*="handle-"]:before {

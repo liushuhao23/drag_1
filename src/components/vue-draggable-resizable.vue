@@ -11,7 +11,17 @@
     @mousedown="elementMouseDown"
     @touchstart="elementTouchDown"
     @contextmenu.stop.prevent='contextmenu'
+    @click.stop="onclick($event)"
   >
+  <div class="line" v-if="enabled">
+    <div class="left_line" :style="{'width': left + 'px', 'left': -left +'px'}"></div>
+    <div class="top_line" :style="{'height': top + 'px', 'top': -top +'px'}"></div>
+  </div>
+  <div class="position_number" v-if="enabled">
+    <span>{{left}},</span>
+    <span>{{top}}</span>
+  </div>
+
     <div
       v-for="handle in actualHandles"
       :key="handle"
@@ -788,6 +798,9 @@ export default {
       }
 
       removeEvent(document.documentElement, eventsFor.move, this.handleResize)
+    },
+    onclick (e) {
+      this.$emit('onclick', e)
     }
   },
   computed: {
@@ -802,7 +815,7 @@ export default {
     },
     actualHandles () {
       if (!this.resizable) return []
-
+      console.log(this.handles)
       return this.handles
     },
     computedWidth () {
