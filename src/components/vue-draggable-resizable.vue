@@ -801,7 +801,7 @@ export default {
       removeEvent(document.documentElement, eventsFor.move, this.handleResize)
     },
     onclick (e) {
-      this.$emit('onclick', e)
+      this.$emit('onclick', e, this.itemdatas)
     },
     dblclick (e) {
       this.$emit('dblclick', e, this.itemdatas)
